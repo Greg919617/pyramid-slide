@@ -7,6 +7,8 @@ symbolElem.onchange = function(event) {
 
     // figure out the symbol by dropdown menu
     symbol = symbolElem.value;
+    
+    drawPyramid(height, symbol);
     //console.log(symbol)
 
 // height
@@ -16,6 +18,8 @@ heightElem.oninput = function(event) {
     heightStr = heightElem.value;
 
     height = parseInt(heightStr);
+
+    
     
     document.getElementById("slider").innerHTML = "&nbsp;&nbsp;" + height;
 
