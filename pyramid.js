@@ -1,16 +1,17 @@
 
 var heightElem = document.getElementById("height");
 var symbolElem = document.getElementById("symbol");
-
+var height = 10;
+var symbol = "#"
 // symbol
 symbolElem.onchange = function(event) {
-
+ 
     // figure out the symbol by dropdown menu
     symbol = symbolElem.value;
     
     drawPyramid(height, symbol);
     //console.log(symbol)
-
+}
 // height
 heightElem.oninput = function(event) {
 
@@ -21,11 +22,12 @@ heightElem.oninput = function(event) {
 
     
     
-    document.getElementById("slider").innerHTML = "&nbsp;&nbsp;" + height;
+    
+   
 
 // draw pyramid 
 drawPyramid(height, symbol);
-}}
+}
 
 function drawPyramid(height, symbol) {
 
@@ -52,5 +54,9 @@ function drawPyramid(height, symbol) {
         rowElem = document.createElement("p");
         rowElem.innerHTML = rowStr;
         document.getElementById("pyramid").appendChild(rowElem);
-    }
+   
+ }
+ document.getElementById("slider").innerHTML = "&nbsp;&nbsp;" + height;
 }
+
+drawPyramid(height, symbol);
